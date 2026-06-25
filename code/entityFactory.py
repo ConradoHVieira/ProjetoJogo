@@ -5,7 +5,7 @@ import random
 from code.background import Background
 from code.enemy import Enemy
 from code.player import Player
-from const import WIN_WIDHT, WIN_HEIGHT
+from const import WIN_WIDTH, WIN_HEIGHT
 
 
 class EntityFactory:
@@ -16,19 +16,19 @@ class EntityFactory:
                 list_bg = []
                 for i in range(7):  # bg images number
                     list_bg.append(Background(f'Level1Bg{i}', position=(0, 0)))
-                    list_bg.append(Background(f'Level1Bg{i}', position=(WIN_WIDHT, 0)))
+                    list_bg.append(Background(f'Level1Bg{i}', position=(WIN_WIDTH, 0)))
                 return list_bg
             case 'Level2Bg':
                 list_bg = []
                 for i in range(5):  # bg images number
                     list_bg.append(Background(f'Level2Bg{i}', position=(0, 0)))
-                    list_bg.append(Background(f'Level2Bg{i}', position=(WIN_WIDHT, 0)))
+                    list_bg.append(Background(f'Level2Bg{i}', position=(WIN_WIDTH, 0)))
                 return list_bg
             case 'Player1':
                 return Player('Player1', (10, WIN_HEIGHT / 2))
             case 'Player2':
                 return Player('Player2', (10, WIN_HEIGHT / 3))
             case 'Enemy1':
-                return Enemy('Enemy1', (WIN_WIDHT + 10, random.randint(40, WIN_HEIGHT - 40)))
+                return Enemy('Enemy1', (WIN_WIDTH + 10, random.randint(40, WIN_HEIGHT - 40)))
             case 'Enemy2':
-                return Enemy('Enemy2', (WIN_WIDHT + 10, random.randint(40, WIN_HEIGHT - 40)))
+                return Enemy('Enemy2', (WIN_WIDTH + 10, random.randint(40, WIN_HEIGHT - 40)))

@@ -4,7 +4,7 @@ import pygame.key
 
 from code.PlayerShot import PlayerShoot
 from code.entity import Entity
-from const import ENTITY_SPEED, WIN_HEIGHT, WIN_WIDHT, PLAYER_KEY_UP, PLAYER_KEY_DOWN, PLAYER_KEY_LEFT, \
+from const import ENTITY_SPEED, WIN_HEIGHT, WIN_WIDTH, PLAYER_KEY_UP, PLAYER_KEY_DOWN, PLAYER_KEY_LEFT, \
     PLAYER_KEY_RIGHT, PLAYER_KEY_SHOOT, ENTITY_SHOT_DELAY
 
 
@@ -21,7 +21,7 @@ class Player(Entity):
             self.rect.centery += ENTITY_SPEED[self.name]
         if pressed_key[PLAYER_KEY_LEFT[self.name]] and self.rect.left > 0:
             self.rect.centerx -= ENTITY_SPEED[self.name]
-        if pressed_key[PLAYER_KEY_RIGHT[self.name]] and self.rect.right < WIN_WIDHT:
+        if pressed_key[PLAYER_KEY_RIGHT[self.name]] and self.rect.right < WIN_WIDTH:
             self.rect.centerx += ENTITY_SPEED[self.name]
         pass
 

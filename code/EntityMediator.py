@@ -3,7 +3,7 @@ from code.PlayerShot import PlayerShoot
 from code.enemy import Enemy
 from code.entity import Entity
 from code.player import Player
-from const import WIN_WIDHT
+from const import WIN_WIDTH
 
 
 class EntityMediator:
@@ -14,7 +14,7 @@ class EntityMediator:
             if ent.rect.right <= 0:
                 ent.health = 0
         if isinstance(ent, PlayerShoot):
-            if ent.rect.left >= WIN_WIDHT:
+            if ent.rect.left >= WIN_WIDTH:
                 ent.health = 0
         if isinstance(ent, EnemyShoot):
             if ent.rect.right <= 0:
